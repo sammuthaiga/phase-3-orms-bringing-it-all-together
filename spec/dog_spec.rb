@@ -166,26 +166,26 @@ describe Dog do
     end
   end
 
-  # describe '#update' do
-  #   it 'updates the record associated with a given instance' do
-  #     teddy = Dog.create(name: "Teddy", breed: "cockapoo")
-  #     teddy.name = "Teddy Jr."
-  #     teddy.update
-  #     also_teddy = Dog.find_by_name("Teddy Jr.")
-  #     expect(also_teddy.id).to eq(teddy.id)
-  #   end
-  # end
+  describe '#update' do
+    it 'updates the record associated with a given instance' do
+      teddy = Dog.create(name: "Teddy", breed: "cockapoo")
+      teddy.name = "Teddy Jr."
+      teddy.update
+      also_teddy = Dog.find_by_name("Teddy Jr.")
+      expect(also_teddy.id).to eq(teddy.id)
+    end
+  end
 
-  # context 'when called on a record with an ID' do
-  #   describe '#save' do
-  #     it 'updates the record associated with a given instance' do
-  #       teddy = Dog.create(name: 'teddy', breed: 'cockapoo')
-  #       teddy.name = "Teddy Jr."
-  #       teddy.save
-  #       also_teddy = Dog.find_by_name("Teddy Jr.")
-  #       expect(also_teddy.id).to eq(teddy.id)
-  #     end
-  #   end
-  # end
+  context 'when called on a record with an ID' do
+    describe '#save' do
+      it 'updates the record associated with a given instance' do
+        teddy = Dog.create(name: 'teddy', breed: 'cockapoo')
+        teddy.name = "Teddy Jr."
+        teddy.save
+        also_teddy = Dog.find_by_name("Teddy Jr.")
+        expect(also_teddy.id).to eq(teddy.id)
+      end
+    end
+  end
 
 end
